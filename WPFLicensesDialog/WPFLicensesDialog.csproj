@@ -5,6 +5,16 @@
     <UseWPF>true</UseWPF>
     <nullable>Enable</nullable>
     <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>singleNeuron</Authors>
+    <Description>An implementation of porting https://github.com/psdev/licensesdialog to WPF</Description>
+    <Copyright>Copyright 2022 singleNeuron</Copyright>
+    <PackageProjectUrl>https://github.com/Cryolitia/WPFLicensesDialog</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/Cryolitia/WPFLicensesDialog</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
@@ -75,6 +85,13 @@
     <EmbeddedResource Include="licenses_full_text\mpl_20_summary.txt" />
     <EmbeddedResource Include="licenses_full_text\sil_ofl_11_full.txt" />
     <EmbeddedResource Include="licenses_full_text\sil_ofl_11_summary.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>

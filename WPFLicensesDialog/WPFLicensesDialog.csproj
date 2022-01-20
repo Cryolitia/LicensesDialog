@@ -1,0 +1,95 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows10.0.18362.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <nullable>Enable</nullable>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="licenses_full_text\asl_20_full.txt" />
+    <None Remove="licenses_full_text\asl_20_summary.txt" />
+    <None Remove="licenses_full_text\bsd2_full.txt" />
+    <None Remove="licenses_full_text\bsd2_summary.txt" />
+    <None Remove="licenses_full_text\bsd3_full.txt" />
+    <None Remove="licenses_full_text\bsd3_summary.txt" />
+    <None Remove="licenses_full_text\ccand_30_full.txt" />
+    <None Remove="licenses_full_text\ccand_30_summary.txt" />
+    <None Remove="licenses_full_text\ccbysa_30_full.txt" />
+    <None Remove="licenses_full_text\ccbysa_30_summary.txt" />
+    <None Remove="licenses_full_text\ccby_30_full.txt" />
+    <None Remove="licenses_full_text\ccby_30_summary.txt" />
+    <None Remove="licenses_full_text\epl_v10_full.txt" />
+    <None Remove="licenses_full_text\epl_v10_summary.txt" />
+    <None Remove="licenses_full_text\gpl_20_full.txt" />
+    <None Remove="licenses_full_text\gpl_20_summary.txt" />
+    <None Remove="licenses_full_text\gpl_30_full.txt" />
+    <None Remove="licenses_full_text\gpl_30_summary.txt" />
+    <None Remove="licenses_full_text\isc_full.txt" />
+    <None Remove="licenses_full_text\isc_summary.txt" />
+    <None Remove="licenses_full_text\lgpl_21_full.txt" />
+    <None Remove="licenses_full_text\lgpl_21_summary.txt" />
+    <None Remove="licenses_full_text\lgpl_3_full.txt" />
+    <None Remove="licenses_full_text\lgpl_3_summary.txt" />
+    <None Remove="licenses_full_text\mit_full.txt" />
+    <None Remove="licenses_full_text\mit_summary.txt" />
+    <None Remove="licenses_full_text\mpl_11_full.txt" />
+    <None Remove="licenses_full_text\mpl_11_summary.txt" />
+    <None Remove="licenses_full_text\mpl_20_full.txt" />
+    <None Remove="licenses_full_text\mpl_20_summary.txt" />
+    <None Remove="licenses_full_text\sil_ofl_11_full.txt" />
+    <None Remove="licenses_full_text\sil_ofl_11_summary.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="licenses_full_text\asl_20_full.txt" />
+    <EmbeddedResource Include="licenses_full_text\asl_20_summary.txt" />
+    <EmbeddedResource Include="licenses_full_text\bsd2_full.txt" />
+    <EmbeddedResource Include="licenses_full_text\bsd2_summary.txt" />
+    <EmbeddedResource Include="licenses_full_text\bsd3_full.txt" />
+    <EmbeddedResource Include="licenses_full_text\bsd3_summary.txt" />
+    <EmbeddedResource Include="licenses_full_text\ccand_30_full.txt" />
+    <EmbeddedResource Include="licenses_full_text\ccand_30_summary.txt" />
+    <EmbeddedResource Include="licenses_full_text\ccbysa_30_full.txt" />
+    <EmbeddedResource Include="licenses_full_text\ccbysa_30_summary.txt" />
+    <EmbeddedResource Include="licenses_full_text\ccby_30_full.txt" />
+    <EmbeddedResource Include="licenses_full_text\ccby_30_summary.txt" />
+    <EmbeddedResource Include="licenses_full_text\epl_v10_full.txt" />
+    <EmbeddedResource Include="licenses_full_text\epl_v10_summary.txt" />
+    <EmbeddedResource Include="licenses_full_text\gpl_20_full.txt" />
+    <EmbeddedResource Include="licenses_full_text\gpl_20_summary.txt" />
+    <EmbeddedResource Include="licenses_full_text\gpl_30_full.txt" />
+    <EmbeddedResource Include="licenses_full_text\gpl_30_summary.txt" />
+    <EmbeddedResource Include="licenses_full_text\isc_full.txt" />
+    <EmbeddedResource Include="licenses_full_text\isc_summary.txt" />
+    <EmbeddedResource Include="licenses_full_text\lgpl_21_full.txt" />
+    <EmbeddedResource Include="licenses_full_text\lgpl_21_summary.txt" />
+    <EmbeddedResource Include="licenses_full_text\lgpl_3_full.txt" />
+    <EmbeddedResource Include="licenses_full_text\lgpl_3_summary.txt" />
+    <EmbeddedResource Include="licenses_full_text\mit_full.txt" />
+    <EmbeddedResource Include="licenses_full_text\mit_summary.txt" />
+    <EmbeddedResource Include="licenses_full_text\mpl_11_full.txt" />
+    <EmbeddedResource Include="licenses_full_text\mpl_11_summary.txt" />
+    <EmbeddedResource Include="licenses_full_text\mpl_20_full.txt" />
+    <EmbeddedResource Include="licenses_full_text\mpl_20_summary.txt" />
+    <EmbeddedResource Include="licenses_full_text\sil_ofl_11_full.txt" />
+    <EmbeddedResource Include="licenses_full_text\sil_ofl_11_summary.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

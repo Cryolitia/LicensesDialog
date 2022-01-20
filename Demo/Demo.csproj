@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0-windows10.0.18362.0</TargetFramework>
+    <StartupObject>Demo.Program</StartupObject>
+    <nullable>Enable</nullable>
+    <ApplicationIcon />
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WPFLicensesDialog\WPFLicensesDialog.csproj" />
+  </ItemGroup>
+
+</Project>

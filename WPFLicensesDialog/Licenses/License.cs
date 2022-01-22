@@ -5,12 +5,12 @@ namespace LicensesDialog.Licenses
 {
     public abstract class License
     {
-        private string? _cachedSummaryText;
-        private string? _cachedFullText;
+        private string _cachedSummaryText;
+        private string _cachedFullText;
         public abstract string Name { get; }
         public virtual string Version => "";
         public abstract string Url { get; }
-        public virtual string? Resource => null;
+        public virtual string Resource => null;
 
         public virtual string ReadSummaryTextFromResources() => ReadTextFromResources(Resource + "_summary");
 
@@ -48,7 +48,7 @@ namespace LicensesDialog.Licenses
         {
             var assembly = Assembly.GetExecutingAssembly();
             var stream = assembly.GetManifestResourceStream(assembly.GetName().Name + ".licenses_full_text." + name + ".txt");
-            StreamReader reader = new StreamReader(stream!);
+            StreamReader reader = new StreamReader(stream);
             return reader.ReadToEnd();
         }
 

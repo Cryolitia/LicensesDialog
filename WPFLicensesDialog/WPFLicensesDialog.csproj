@@ -1,12 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0-windows10.0.18362.0</TargetFramework>
+    <TargetFrameworks>net6.0-windows10.0.18362.0;net48</TargetFrameworks>
     <UseWPF>true</UseWPF>
-    <nullable>Enable</nullable>
-    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>singleNeuron</Authors>
+    <Nullable>disable</Nullable>
     <Description>An implementation of porting https://github.com/psdev/licensesdialog to WPF</Description>
     <Copyright>Copyright 2022 singleNeuron</Copyright>
     <PackageProjectUrl>https://github.com/Cryolitia/WPFLicensesDialog</PackageProjectUrl>
@@ -15,7 +14,13 @@
     <RepositoryType>git</RepositoryType>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Condition="'$(TargetFramework)' == 'net48'" Include="Microsoft.Windows.SDK.Contracts" Version="10.0.18362.2005" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Remove="licenses_full_text\asl_20_full.txt" />

@@ -13,8 +13,8 @@ namespace LicensesDialog
     {
         public static FlowDocument Build(List<Notice> notices, bool showFullLicenseText, UIColor uiColor)
         {
-            FlowDocument flowDocument = new();
-            Section section = new();
+            FlowDocument flowDocument = new FlowDocument();
+            Section section = new Section();
             section.Foreground = new SolidColorBrush(uiColor.TextColor);
             foreach (Notice notice in notices)
             {
@@ -26,8 +26,8 @@ namespace LicensesDialog
 
         public static Section BuildLicenseSection(Notice notice, bool showFullLicenseText, UIColor uiColor)
         {
-            Section section = new();
-            List list = new();
+            Section section = new Section();
+            List list = new List();
             Span span = new Span();
             span.Inlines.Add(new Run(notice.Name));
             if (notice.Url!=null && notice.Url.Length > 0)
@@ -41,7 +41,7 @@ namespace LicensesDialog
             }
             list.ListItems.Add(new ListItem(new Paragraph(span)));
             section.Blocks.Add(list);
-            Section section2 = new();
+            Section section2 = new Section();
             section2.FontFamily = new FontFamily("Global Monospace");
             section2.Background = new SolidColorBrush(uiColor.Gray);
             section2.Padding = new Thickness(10);
@@ -53,11 +53,11 @@ namespace LicensesDialog
             string licenseText;
             if (showFullLicenseText)
             {
-                licenseText = notice.License!.FullText;
+                licenseText = notice.License.FullText;
             }
             else
             {
-                licenseText = notice.License!.SummaryText;
+                licenseText = notice.License.SummaryText;
             }
             section2.Blocks.Add(new Paragraph(new Run(licenseText)));
             section.Blocks.Add(section2);

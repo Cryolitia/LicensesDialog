@@ -1,3 +1,5 @@
+package me.singleneuron.licensesdialog.common
+
 import androidx.compose.foundation.VerticalScrollbar
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -21,8 +23,7 @@ actual fun DialogMMP(onCloseRequest: () -> Unit, title: String?, content: @Compo
             Box {
                 content.invoke(stateVertical, Modifier)
             }
-            VerticalScrollbar(modifier = Modifier.align(Alignment.CenterEnd)
-                .fillMaxHeight(), adapter = rememberScrollbarAdapter(scrollState = stateVertical))
+            VerticalScrollbar(modifier = Modifier.align(Alignment.CenterEnd).fillMaxHeight(), adapter = rememberScrollbarAdapter(scrollState = stateVertical))
 
         }
     })

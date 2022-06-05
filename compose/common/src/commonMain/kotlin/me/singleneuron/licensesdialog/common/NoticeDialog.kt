@@ -1,16 +1,12 @@
 package me.singleneuron.licensesdialog.common
 
-import DialogMMP
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import me.singleneuron.licensesdialog.common.licenses.ApacheSoftwareLicense20
 import me.singleneuron.licensesdialog.common.model.Notice
 
@@ -21,13 +17,20 @@ annotation class ComposeIssue
 
 @Composable
 @ComposeIssue
-fun NoticeDialog(title: String?, notices: MutableList<Notice>, showFullText: Boolean = false, showOwnText: Boolean = true,
+fun NoticeDialog(
+    title: String?,
+    notices: MutableList<Notice>,
+    state: MutableState<Boolean> = mutableStateOf(true),
     //TODO: Overwrite it!!!
-                 systemInDarkTheme: Boolean = isSystemInDarkTheme()) {
-    var state by rememberSaveable { mutableStateOf(true) }
-    if (state) {
+    systemInDarkTheme: Boolean = isSystemInDarkTheme(),
+    showFullText: Boolean = false,
+    showOwnText: Boolean = true,
+) {
+    var mState by rememberSaveable { state }
+
+    if (mState) {
         MaterialTheme(if (systemInDarkTheme) darkColors() else lightColors()) {
-            DialogMMP(onCloseRequest = { state = false }, title = title) { it ->
+            DialogMMP(onCloseRequest = { mState = false }, title = title) { it ->
                 if (showOwnText) {
                     notices.add(ownLicense)
                 }

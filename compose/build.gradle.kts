@@ -1,5 +1,5 @@
-group "io.github.cryolitia.licensesdialog"
-version "1.0-SNAPSHOT"
+group "io.github.cryolitia.licensesdialog.compose"
+version "1.0"
 
 allprojects {
     repositories {

@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "io.github.cryolitia.licensesdialog"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 
 kotlin {

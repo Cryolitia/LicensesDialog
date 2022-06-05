@@ -8,8 +8,8 @@ plugins {
     signing
 }
 
-group = "io.github.cryolitia.common"
-version = "1.0-SNAPSHOT"
+group = "io.github.cryolitia.licensesdialog.compose"
+version = "1.0"
 
 kotlin {
     android {
@@ -48,6 +48,16 @@ kotlin {
 }
 
 publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/Cryolitia/LicensesDialog")
+            credentials {
+                username = "Cryolitia"
+                password = project.findProperty("github.publishPAT").toString()
+            }
+        }
+    }
     publications {
         getByName<MavenPublication>("kotlinMultiplatform") {
             pom {
@@ -70,6 +80,10 @@ publishing {
             }
         }
     }
+}
+
+signing {
+    sign(publishing.publications["kotlinMultiplatform"])
 }
 
 android {

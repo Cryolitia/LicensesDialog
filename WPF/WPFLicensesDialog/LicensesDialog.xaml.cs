@@ -77,7 +77,7 @@ namespace LicensesDialog
             {
                 if (ShowOwnLicense)
                 {
-                    dialog.Notices.Add(new Notice("WPFLicensesDialog","https://github.com/Cryolitia/WPFLicensesDialog","Copyright 2022 singleNeuron", new ApacheSoftwareLicense20()));
+                    dialog.Notices.Add(new Notice("LicensesDialog","https://github.com/Cryolitia/LicensesDialog","Copyright 2022 singleNeuron", new ApacheSoftwareLicense20()));
                 }
                 dialog.Init();
                 return dialog;

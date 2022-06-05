@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "io.github.cryolitia.licensesdialog.compose"
-version = "1.0"
+version = "1.0.2"
 
 kotlin {
     android {

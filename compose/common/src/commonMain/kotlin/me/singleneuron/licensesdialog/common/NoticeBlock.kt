@@ -1,7 +1,6 @@
 package me.singleneuron.licensesdialog.common
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
@@ -32,7 +31,7 @@ fun NoticeBlock(notice: Notice, showFullLicenseText: Boolean = false) {
             }
         }
         Text(modifier = Modifier.padding(vertical = 16.dp)
-            .background(if (!isSystemInDarkTheme()) Color(238, 238, 238) else Color(16, 16, 16))
+            .background(if (MaterialTheme.colors.isLight) Color(238, 238, 238) else Color(16, 16, 16))
             .padding(16.dp), text = buildAnnotatedString {
             withStyle(style = SpanStyle(fontFamily = FontFamily.Monospace, color = MaterialTheme.colors.onBackground)) {
                 val copyright = notice.copyright

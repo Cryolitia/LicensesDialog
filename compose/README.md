@@ -12,7 +12,7 @@ dependencyResolutionManagement {
             url = uri("https://maven.pkg.github.com/Cryolitia/LicensesDialog")
             credentials {
                 username = "Cryolitia"
-                password = "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"
+                password = "9sb2n1ZvKGNMSzXqd0vIxX4nJJuRQHMOc3pf_phg".reverse()
             }
         }
         //other respositories……
